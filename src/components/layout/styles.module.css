@@ -15,7 +15,7 @@
 
 .main {
   display: flex;
-  height: 85vh;
+  min-height: 85vh;
   align-items: center;
   padding-right: 42px;
   padding-left: 42px;
