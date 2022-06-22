@@ -1,0 +1,18 @@
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imageBox img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
+.imageBox:hover img {
+  transform: scale(1.1);
+}
