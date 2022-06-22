@@ -1,13 +1,22 @@
-import { HelloWorld } from "../src/components/HelloWorld";
-import "../public/css/styles.css";
-import React from "react";
+import React from 'react'
+import type { AppProps } from 'next/app'
+import { StyleProvider, ThemePicker } from 'vcc-ui'
 
-function HomePage() {
+import '../public/css/styles.css'
+
+const App: React.FC<AppProps> = ({
+  Component,
+  pageProps,
+}): React.ReactElement => {
   return (
     <React.StrictMode>
-      <HelloWorld />
+      <StyleProvider>
+        <ThemePicker variant='light'>
+          <Component {...pageProps} />
+        </ThemePicker>
+      </StyleProvider>
     </React.StrictMode>
-  );
+  )
 }
 
-export default HomePage;
+export default App
